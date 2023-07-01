@@ -1,5 +1,6 @@
 /** Class that prints the Collatz sequence starting from a given number.
- *  @author YOUR NAME HERE
+ *  @author Andrew Nachtigal
+ *  https://stackoverflow.com/questions/38928443/collatz-conjecture-method-java
  */
 public class Collatz {
 
