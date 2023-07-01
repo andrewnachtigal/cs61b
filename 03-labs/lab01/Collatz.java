@@ -3,24 +3,33 @@
  */
 public class Collatz {
 
-    /** Returns the nextNumber in a Collatz sequence. */
+    /**
+     * Returns the nextNumber in a Collatz sequence.
+     */
     public static int nextNumber(int n) {
-        /** description comment */
+        /** Collatz description comment */
         // TODO: Fill in this method.
-        return 1;
-    }
-
-    public static void main(String[] args) {
-        int n = 5;
-        System.out.print(n + " ");
-
-        // Some starter code to test
-        while (n != 1) {          
-            n = nextNumber(n);          
-            System.out.print(n + " ");
+        if (n == 1) {
+            return 0;
+        } else {
+            if (n % 2 > 0) {
+                return 1 + nextNumber(n * 3 + 1);
+            } else {
+                return 1 + nextNumber(n / 2);
+            }
         }
-        System.out.println();
 
     }
-}
+        public static void main (String[]args){
+            int n = 5;
+            System.out.print(n + " ");
 
+            // Some starter code to test
+            while (n != 1) {
+                n = nextNumber(n);
+                System.out.print(n + " ");
+            }
+            System.out.println();
+
+        }
+    }
